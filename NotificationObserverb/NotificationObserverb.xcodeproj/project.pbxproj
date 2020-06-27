@@ -13,6 +13,9 @@
 		10B0FB7824A7B4CC0056D4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB7624A7B4CC0056D4B0 /* Main.storyboard */; };
 		10B0FB7A24A7B4CF0056D4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB7924A7B4CF0056D4B0 /* Assets.xcassets */; };
 		10B0FB7D24A7B4CF0056D4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB7B24A7B4CF0056D4B0 /* LaunchScreen.storyboard */; };
+		10B0FB8624A7B4FD0056D4B0 /* FirstViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0FB8524A7B4FD0056D4B0 /* FirstViewViewController.swift */; };
+		10B0FB8924A7B5210056D4B0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0FB8824A7B5210056D4B0 /* SecondViewController.swift */; };
+		10B0FB8B24A7D8D80056D4B0 /* extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0FB8A24A7D8D80056D4B0 /* extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		10B0FB7924A7B4CF0056D4B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B0FB7C24A7B4CF0056D4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10B0FB7E24A7B4CF0056D4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B0FB8524A7B4FD0056D4B0 /* FirstViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewViewController.swift; sourceTree = "<group>"; };
+		10B0FB8824A7B5210056D4B0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		10B0FB8A24A7D8D80056D4B0 /* extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 		10B0FB6424A7B4CC0056D4B0 = {
 			isa = PBXGroup;
 			children = (
+				10B0FB8424A7B4D70056D4B0 /* Supportsfiles */,
 				10B0FB6F24A7B4CC0056D4B0 /* NotificationObserverb */,
 				10B0FB6E24A7B4CC0056D4B0 /* Products */,
 			);
@@ -56,15 +63,25 @@
 		10B0FB6F24A7B4CC0056D4B0 /* NotificationObserverb */ = {
 			isa = PBXGroup;
 			children = (
-				10B0FB7024A7B4CC0056D4B0 /* AppDelegate.swift */,
-				10B0FB7224A7B4CC0056D4B0 /* SceneDelegate.swift */,
-				10B0FB7424A7B4CC0056D4B0 /* ViewController.swift */,
-				10B0FB7624A7B4CC0056D4B0 /* Main.storyboard */,
-				10B0FB7924A7B4CF0056D4B0 /* Assets.xcassets */,
-				10B0FB7B24A7B4CF0056D4B0 /* LaunchScreen.storyboard */,
 				10B0FB7E24A7B4CF0056D4B0 /* Info.plist */,
+				10B0FB8524A7B4FD0056D4B0 /* FirstViewViewController.swift */,
+				10B0FB8824A7B5210056D4B0 /* SecondViewController.swift */,
+				10B0FB8A24A7D8D80056D4B0 /* extentions.swift */,
 			);
 			path = NotificationObserverb;
+			sourceTree = "<group>";
+		};
+		10B0FB8424A7B4D70056D4B0 /* Supportsfiles */ = {
+			isa = PBXGroup;
+			children = (
+				10B0FB7924A7B4CF0056D4B0 /* Assets.xcassets */,
+				10B0FB7B24A7B4CF0056D4B0 /* LaunchScreen.storyboard */,
+				10B0FB7624A7B4CC0056D4B0 /* Main.storyboard */,
+				10B0FB7424A7B4CC0056D4B0 /* ViewController.swift */,
+				10B0FB7224A7B4CC0056D4B0 /* SceneDelegate.swift */,
+				10B0FB7024A7B4CC0056D4B0 /* AppDelegate.swift */,
+			);
+			path = Supportsfiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B0FB8B24A7D8D80056D4B0 /* extentions.swift in Sources */,
 				10B0FB7524A7B4CC0056D4B0 /* ViewController.swift in Sources */,
 				10B0FB7124A7B4CC0056D4B0 /* AppDelegate.swift in Sources */,
+				10B0FB8624A7B4FD0056D4B0 /* FirstViewViewController.swift in Sources */,
+				10B0FB8924A7B5210056D4B0 /* SecondViewController.swift in Sources */,
 				10B0FB7324A7B4CC0056D4B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
