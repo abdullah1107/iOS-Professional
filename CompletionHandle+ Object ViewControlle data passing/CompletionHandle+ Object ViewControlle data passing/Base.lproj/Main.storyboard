@@ -18,6 +18,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5f3-8O-Ot5">
                                 <rect key="frame" x="107" y="460" width="200" height="30"/>
                                 <state key="normal" title="CallingSecondViewController"/>
+                                <connections>
+                                    <action selector="SVCcalled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpi-d2-KX3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

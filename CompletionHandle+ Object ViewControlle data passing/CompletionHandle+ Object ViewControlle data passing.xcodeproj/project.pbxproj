@@ -13,6 +13,9 @@
 		10B0FB4F24A7A6070056D4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB4D24A7A6070056D4B0 /* Main.storyboard */; };
 		10B0FB5124A7A60B0056D4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB5024A7A60B0056D4B0 /* Assets.xcassets */; };
 		10B0FB5424A7A60B0056D4B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB5224A7A60B0056D4B0 /* LaunchScreen.storyboard */; };
+		10B0FB5D24A7A6550056D4B0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0FB5C24A7A6550056D4B0 /* FirstViewController.swift */; };
+		10B0FB6024A7A6670056D4B0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0FB5E24A7A6670056D4B0 /* SecondViewController.swift */; };
+		10B0FB6124A7A6670056D4B0 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B0FB5F24A7A6670056D4B0 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		10B0FB5024A7A60B0056D4B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B0FB5324A7A60B0056D4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10B0FB5524A7A60B0056D4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B0FB5C24A7A6550056D4B0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		10B0FB5E24A7A6670056D4B0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		10B0FB5F24A7A6670056D4B0 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		10B0FB4624A7A6070056D4B0 /* CompletionHandle+ Object ViewControlle data passing */ = {
 			isa = PBXGroup;
 			children = (
-				10B0FB4724A7A6070056D4B0 /* AppDelegate.swift */,
-				10B0FB4924A7A6070056D4B0 /* SceneDelegate.swift */,
-				10B0FB4B24A7A6070056D4B0 /* ViewController.swift */,
+				10B0FB6324A7A67D0056D4B0 /* SecondViewController */,
+				10B0FB6224A7A6700056D4B0 /* FirstVIewController */,
 				10B0FB4D24A7A6070056D4B0 /* Main.storyboard */,
-				10B0FB5024A7A60B0056D4B0 /* Assets.xcassets */,
-				10B0FB5224A7A60B0056D4B0 /* LaunchScreen.storyboard */,
+				10B0FB5B24A7A6240056D4B0 /* SupportFiles */,
 				10B0FB5524A7A60B0056D4B0 /* Info.plist */,
 			);
 			path = "CompletionHandle+ Object ViewControlle data passing";
+			sourceTree = "<group>";
+		};
+		10B0FB5B24A7A6240056D4B0 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				10B0FB5224A7A60B0056D4B0 /* LaunchScreen.storyboard */,
+				10B0FB5024A7A60B0056D4B0 /* Assets.xcassets */,
+				10B0FB4B24A7A6070056D4B0 /* ViewController.swift */,
+				10B0FB4924A7A6070056D4B0 /* SceneDelegate.swift */,
+				10B0FB4724A7A6070056D4B0 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		10B0FB6224A7A6700056D4B0 /* FirstVIewController */ = {
+			isa = PBXGroup;
+			children = (
+				10B0FB5C24A7A6550056D4B0 /* FirstViewController.swift */,
+			);
+			path = FirstVIewController;
+			sourceTree = "<group>";
+		};
+		10B0FB6324A7A67D0056D4B0 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10B0FB5F24A7A6670056D4B0 /* SecondViewController.xib */,
+				10B0FB5E24A7A6670056D4B0 /* SecondViewController.swift */,
+			);
+			path = SecondViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B0FB6124A7A6670056D4B0 /* SecondViewController.xib in Resources */,
 				10B0FB5424A7A60B0056D4B0 /* LaunchScreen.storyboard in Resources */,
 				10B0FB5124A7A60B0056D4B0 /* Assets.xcassets in Resources */,
 				10B0FB4F24A7A6070056D4B0 /* Main.storyboard in Resources */,
@@ -141,6 +175,8 @@
 				10B0FB4C24A7A6070056D4B0 /* ViewController.swift in Sources */,
 				10B0FB4824A7A6070056D4B0 /* AppDelegate.swift in Sources */,
 				10B0FB4A24A7A6070056D4B0 /* SceneDelegate.swift in Sources */,
+				10B0FB6024A7A6670056D4B0 /* SecondViewController.swift in Sources */,
+				10B0FB5D24A7A6550056D4B0 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abdullah.datapassing.CompletionHandle--Object-ViewControlle-data-passing";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abdullah.datapassing.data-passing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abdullah.datapassing.CompletionHandle--Object-ViewControlle-data-passing";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.abdullah.datapassing.data-passing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
