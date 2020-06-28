@@ -1,6 +1,6 @@
-//
 //  SecondViewController.swift
 //  NotificationObserverb
+
 //  Created by Muhammad Abdullah Al Mamun on 27/6/20.
 //  Copyright © 2020 Muhammad Abdullah Al Mamun. All rights reserved.
 //
