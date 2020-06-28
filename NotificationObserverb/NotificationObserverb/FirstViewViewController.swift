@@ -12,11 +12,17 @@ class FirstViewViewController: UIViewController {
     
     static let notificationName = Notification.Name("simpleNotification")
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         NotificationCenter.default.addObserver(self, selector: #selector(onNotification(notification:)), name: FirstViewViewController.notificationName, object: nil)
         // Do any additional setup after loading the view.
+        
+        
     }
     
     
@@ -35,6 +41,10 @@ class FirstViewViewController: UIViewController {
         // `userInfo` contains the data you sent along with the notification
         
         print(notification.userInfo as Any)
+        
+        
+        NotificationCenter.default.removeObserver(self)
+        
     }
     
     
