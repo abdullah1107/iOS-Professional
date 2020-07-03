@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName="Book" syncable="YES">
+        <attribute name="bookAuthor" optional="YES" attributeType="String"/>
+        <attribute name="bookID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="bookImage" optional="YES" attributeType="Binary"/>
+        <attribute name="bookName" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="103"/>
+    </elements>
+</model>
