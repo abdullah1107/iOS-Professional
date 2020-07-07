@@ -43,17 +43,9 @@
                     <view key="view" contentMode="scaleToFill" id="22R-iH-5GP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                      
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="sDD-f1-Ner" firstAttribute="centerY" secondItem="xLL-cU-BUh" secondAttribute="centerY" id="ekT-7P-bHW"/>
-                            <constraint firstItem="sDD-f1-Ner" firstAttribute="centerX" secondItem="xLL-cU-BUh" secondAttribute="centerX" id="omB-9b-O5V"/>
 
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jO4-Jb-6gp">
-                                <rect key="frame" x="94" y="151" width="234" height="30"/>
-                                <state key="normal" title="my Button"/>
-                            </button>
-                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                      
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jO4-Jb-6gp" firstAttribute="top" secondItem="xLL-cU-BUh" secondAttribute="top" constant="107" id="YPf-ds-r6C"/>
