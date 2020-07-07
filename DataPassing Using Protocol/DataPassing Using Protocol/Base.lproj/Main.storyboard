@@ -43,7 +43,16 @@
                     <view key="view" contentMode="scaleToFill" id="22R-iH-5GP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDD-f1-Ner">
+                                <rect key="frame" x="182.5" y="437.5" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sDD-f1-Ner" firstAttribute="centerY" secondItem="xLL-cU-BUh" secondAttribute="centerY" id="ekT-7P-bHW"/>
+                            <constraint firstItem="sDD-f1-Ner" firstAttribute="centerX" secondItem="xLL-cU-BUh" secondAttribute="centerX" id="omB-9b-O5V"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xLL-cU-BUh"/>
                     </view>
                 </viewController>
