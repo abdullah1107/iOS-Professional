@@ -21,6 +21,27 @@ class ViewController: UIViewController,UICollectionViewDelegateFlowLayout {
         
     }
     
+//    override func viewWillLayoutSubviews() {
+//        super.viewWillLayoutSubviews()
+//        setupCollectionViewItemSize()
+//    }
+    
+    private func setupCollectionViewItemSize() {
+         let numberOfItemPerRow: CGFloat = 2
+         let interItemSpacing: CGFloat = 10
+
+         let width = (mycollectionView.frame.width - (numberOfItemPerRow - 1) * interItemSpacing) / numberOfItemPerRow
+          
+          let height: CGFloat = 180
+
+         collectionViewFlowLayout = UICollectionViewFlowLayout()
+
+         collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
+         
+         mycollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
+    
+     }
+    
     
 }
 
