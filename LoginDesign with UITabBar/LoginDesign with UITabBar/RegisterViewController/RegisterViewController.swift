@@ -18,7 +18,7 @@ class RegisterViewController: UIViewController {
     }
     @IBAction func registerbtnClicked(_ sender: UIButton) {
         // set user defaults username
-          Defaults.username = "mamuns"
+          Defaults.username = "mamun"
           
           let storyboard = UIStoryboard(name: "Main", bundle: nil)
           let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
