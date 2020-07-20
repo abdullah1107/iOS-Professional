@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     let cellIdentifier = "GallaryItemCollectionViewCell"
+    let viewImageSegueIdentifier = "viewImageSegueIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,17 @@ class ViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setupCollectionViewItemSize()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let i = sender as! Item
+        
+        if segue.identifier == viewImageSegueIdentifier{
+            if let vc = segue.destination as? ImageViewerViewController{
+                vc.imageName = i.imageName
+            }
+        }
+        
     }
     
     private func setupCollectionView(){
@@ -58,8 +70,8 @@ class ViewController: UIViewController {
     private func setupCollectionViewItemSize(){
         if collectionViewFlowLayout == nil{
             let numberOFItemPerRow: CGFloat = 5
-            let lineSpacing: CGFloat = 5
-            let interItemSpacing: CGFloat = 5
+            let lineSpacing: CGFloat = 2
+            let interItemSpacing: CGFloat = 2
             
             let width = (collectionView.frame.width - (numberOFItemPerRow - 1) * interItemSpacing) / numberOFItemPerRow
             let height = width
@@ -93,6 +105,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+        let i = item[indexPath.item]
+        performSegue(withIdentifier: viewImageSegueIdentifier, sender: i)
     }
     
     

@@ -49,11 +49,42 @@
                     <navigationItem key="navigationItem" title="Galary View" id="sXE-QB-LXC"/>
                     <connections>
                         <outlet property="collectionView" destination="7rg-ZI-5Ej" id="2Vj-Fs-6tt"/>
+                        <segue destination="OQx-Kp-40B" kind="show" identifier="viewImageSegueIdentifier" id="Vet-vl-g9Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="118.52678571428571"/>
+        </scene>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="1wz-uD-1gw">
+            <objects>
+                <viewController id="OQx-Kp-40B" customClass="ImageViewerViewController" customModule="CollectionViewTestApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="366-Jl-6yh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUg-Sc-IHy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X8l-nm-oUj" firstAttribute="bottom" secondItem="oUg-Sc-IHy" secondAttribute="bottom" id="AHL-j6-WQ1"/>
+                            <constraint firstItem="X8l-nm-oUj" firstAttribute="trailing" secondItem="oUg-Sc-IHy" secondAttribute="trailing" id="C5m-po-EdO"/>
+                            <constraint firstItem="oUg-Sc-IHy" firstAttribute="leading" secondItem="X8l-nm-oUj" secondAttribute="leading" id="ZsR-S6-Y6d"/>
+                            <constraint firstItem="oUg-Sc-IHy" firstAttribute="top" secondItem="X8l-nm-oUj" secondAttribute="top" id="fd0-fN-q0g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X8l-nm-oUj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lba-2O-hWQ"/>
+                    <connections>
+                        <outlet property="imageView" destination="oUg-Sc-IHy" id="Gse-Zf-Y0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3cH-gj-vr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P7Z-yH-zoz">
