@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        setupCollectionView()
+        setupCollectionViewItemSize()
     }
     
     private func setupCollectionView(){
@@ -55,9 +55,9 @@ class ViewController: UIViewController {
         
     }
     
-    private func setipCollectionViewItemSize(){
+    private func setupCollectionViewItemSize(){
         if collectionViewFlowLayout == nil{
-            let numberOFItemPerRow: CGFloat = 3
+            let numberOFItemPerRow: CGFloat = 5
             let lineSpacing: CGFloat = 5
             let interItemSpacing: CGFloat = 5
             
