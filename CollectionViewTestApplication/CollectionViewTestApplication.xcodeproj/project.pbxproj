@@ -13,6 +13,8 @@
 		1B71B78824C5486B00DCE78D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B71B78624C5486B00DCE78D /* Main.storyboard */; };
 		1B71B78A24C5486C00DCE78D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B71B78924C5486C00DCE78D /* Assets.xcassets */; };
 		1B71B78D24C5486C00DCE78D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B71B78B24C5486C00DCE78D /* LaunchScreen.storyboard */; };
+		1B71B79824C54D0D00DCE78D /* GallaryItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B71B79624C54D0D00DCE78D /* GallaryItemCollectionViewCell.swift */; };
+		1B71B79924C54D0D00DCE78D /* GallaryItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B71B79724C54D0D00DCE78D /* GallaryItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1B71B78924C5486C00DCE78D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B71B78C24C5486C00DCE78D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B71B78E24C5486C00DCE78D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B71B79624C54D0D00DCE78D /* GallaryItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B71B79724C54D0D00DCE78D /* GallaryItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GallaryItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				1B71B78924C5486C00DCE78D /* Assets.xcassets */,
 				1B71B78B24C5486C00DCE78D /* LaunchScreen.storyboard */,
 				1B71B78E24C5486C00DCE78D /* Info.plist */,
+				1B71B79624C54D0D00DCE78D /* GallaryItemCollectionViewCell.swift */,
+				1B71B79724C54D0D00DCE78D /* GallaryItemCollectionViewCell.xib */,
 			);
 			path = CollectionViewTestApplication;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B71B79924C54D0D00DCE78D /* GallaryItemCollectionViewCell.xib in Resources */,
 				1B71B78D24C5486C00DCE78D /* LaunchScreen.storyboard in Resources */,
 				1B71B78A24C5486C00DCE78D /* Assets.xcassets in Resources */,
 				1B71B78824C5486B00DCE78D /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B71B79824C54D0D00DCE78D /* GallaryItemCollectionViewCell.swift in Sources */,
 				1B71B78524C5486B00DCE78D /* ViewController.swift in Sources */,
 				1B71B78124C5486B00DCE78D /* AppDelegate.swift in Sources */,
 				1B71B78324C5486B00DCE78D /* SceneDelegate.swift in Sources */,
