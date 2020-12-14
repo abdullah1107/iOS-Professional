@@ -11,13 +11,27 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="WorkingLocation_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="WorkingLocation_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QJj-ZS-R7Q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QJj-ZS-R7Q" secondAttribute="bottom" id="Rav-uo-MgP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QJj-ZS-R7Q" secondAttribute="trailing" id="Rbx-QM-SVO"/>
+                            <constraint firstItem="QJj-ZS-R7Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oQe-zd-0So"/>
+                            <constraint firstItem="QJj-ZS-R7Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="q9w-s6-czc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="QJj-ZS-R7Q" id="jsQ-Yq-utu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

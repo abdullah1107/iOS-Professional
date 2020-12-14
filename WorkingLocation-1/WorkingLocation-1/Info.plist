@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This string is required to gain permission to access location services on iOS 8+ when the app in the background and should describe how your app uses location services. Set this string in the Info.plist</string>
+	<key>NSLocationUsageDescription</key>
+	<string>This string is required to gain permission</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This string is required to gain permission to access location services on iOS 8+ when the app in the background and should describe how your app uses location services. Set this string in the Info.plist</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>When in use permissions</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

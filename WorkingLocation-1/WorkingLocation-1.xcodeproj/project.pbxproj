@@ -56,15 +56,39 @@
 		1004FC242586406F00248703 /* WorkingLocation-1 */ = {
 			isa = PBXGroup;
 			children = (
-				1004FC252586406F00248703 /* AppDelegate.swift */,
-				1004FC272586406F00248703 /* SceneDelegate.swift */,
-				1004FC292586406F00248703 /* HomeViewController.swift */,
-				1004FC2B2586406F00248703 /* Main.storyboard */,
+				1004FC3E25865E6200248703 /* Controller */,
+				1004FC3D25865E5900248703 /* View */,
+				1004FC3C25865E4900248703 /* SupportFiles */,
 				1004FC2E2586407900248703 /* Assets.xcassets */,
-				1004FC302586407900248703 /* LaunchScreen.storyboard */,
 				1004FC332586407900248703 /* Info.plist */,
 			);
 			path = "WorkingLocation-1";
+			sourceTree = "<group>";
+		};
+		1004FC3C25865E4900248703 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1004FC272586406F00248703 /* SceneDelegate.swift */,
+				1004FC252586406F00248703 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		1004FC3D25865E5900248703 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1004FC2B2586406F00248703 /* Main.storyboard */,
+				1004FC302586407900248703 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1004FC3E25865E6200248703 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1004FC292586406F00248703 /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
