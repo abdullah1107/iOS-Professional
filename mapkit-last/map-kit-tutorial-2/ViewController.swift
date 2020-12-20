@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
     
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
@@ -18,19 +18,55 @@ class ViewController: UIViewController {
     private var currentRoute: MKRoute?
 
     @IBOutlet weak var mapView: MKMapView!
+    
+//    override func viewDidLoad() {
+//           super.viewDidLoad()
+//
+//           let request = MKDirectionsRequest()
+//
+//           // Set request parameters
+//           request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 40.7127, longitude: -74.0059), addressDictionary: nil))
+//           request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 40.6761, longitude: -73.9521), addressDictionary: nil))
+//           request.requestsAlternateRoutes = true
+//
+//           // Set tranport type parameter (anything other than .Transit works)
+//           request.transportType = .transit
+//
+//           let directions = MKDirections(request: request)
+//
+//           directions.calculateDirectionsWithCompletionHandler { response, error in
+//               print(response)
+//
+//               guard let routes = response?.routes else {
+//                   print(error?.description)
+//                   return
+//               }
+//
+//               // Prints step-by-step directions
+//               for r in routes {
+//                   print("New route")
+//                   for step in r.steps {
+//                       print("  " + step.instructions)
+//                   }
+//               }
+//           }
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.delegate = self
+        
         
         configureLocationServices()
+        mapView.delegate = self
+        temp()
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
     
     private func configureLocationServices() {
         locationManager.delegate = self
@@ -39,9 +75,34 @@ class ViewController: UIViewController {
         if status == .notDetermined {
             locationManager.requestAlwaysAuthorization()
         } else if status == .authorizedAlways || status == .authorizedWhenInUse {
-           beginLocationUpdates(locationManager: locationManager)
+            beginLocationUpdates(locationManager: locationManager)
         }
-    }
+        
+        
+    
+        
+//        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//
+//            print("Not being called")
+//            let renderer = MKPolylineRenderer(overlay: overlay)
+//
+//            return renderer
+}
+        func temp() ->MKOverlayRenderer {
+            
+            
+            print("hello.......")
+              guard let currentRoute = currentRoute else {
+                  return MKOverlayRenderer()
+              }
+              
+              let polyLineRenderer = MKPolylineRenderer(polyline: currentRoute.polyline)
+              polyLineRenderer.strokeColor = UIColor.systemRed
+              polyLineRenderer.lineWidth = 5
+              
+              return polyLineRenderer
+          }
+    //}
     
     private func beginLocationUpdates(locationManager: CLLocationManager) {
         mapView.showsUserLocation = true
@@ -69,15 +130,16 @@ class ViewController: UIViewController {
         
         mapView.addAnnotation(appleParkAnnotation)
         mapView.addAnnotation(ortegaParkAnnotation)
+       
     }
     
     private func constructRoute(userLocation: CLLocationCoordinate2D) {
         
         let directionsRequest = MKDirectionsRequest()
-        directionsRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation))
-        directionsRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinations[0].coordinate))
+        directionsRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: destinations[0].coordinate))
+        directionsRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: destinations[1].coordinate))
         directionsRequest.requestsAlternateRoutes = true
-        directionsRequest.transportType = .automobile
+        directionsRequest.transportType = .transit
         
         let directions = MKDirections(request: directionsRequest)
         
@@ -107,10 +169,10 @@ extension ViewController: CLLocationManagerDelegate {
         if currentCoordinate == nil {
             zoomToLatestLocation(with: latestLocation.coordinate)
             addAnnotations()
-            constructRoute(userLocation: latestLocation.coordinate)
+            constructRoute(userLocation: destinations[0].coordinate)
         }
     
-        currentCoordinate = latestLocation.coordinate
+        currentCoordinate = destinations[0].coordinate
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -121,44 +183,56 @@ extension ViewController: CLLocationManagerDelegate {
     }
 }
 
-extension ViewController: MKMapViewDelegate {
+//extension ViewController: MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        
-        guard let currentRoute = currentRoute else {
-            return MKOverlayRenderer()
-        }
-        
-        let polyLineRenderer = MKPolylineRenderer(polyline: currentRoute.polyline)
-        polyLineRenderer.strokeColor = UIColor.orange
-        polyLineRenderer.lineWidth = 5
-        
-        return polyLineRenderer
-    }
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//
+//        guard let currentRoute = currentRoute else {
+//            return MKOverlayRenderer()
+//        }
+//
+//        let polyLineRenderer = MKPolylineRenderer(polyline: currentRoute.polyline)
+//        polyLineRenderer.strokeColor = UIColor.systemRed
+//        polyLineRenderer.lineWidth = 5
+//
+//        return polyLineRenderer
+//    }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationView")
-        
-        if annotationView == nil {
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
-        }
-        
-        if let title = annotation.title, title == "Apple Park" {
-            annotationView?.image = UIImage(named: "saucer")
-        } else if let title = annotation.title, title == "Ortega Park" {
-            annotationView?.image = UIImage(named: "tree")
-        } else if annotation === mapView.userLocation {
-            annotationView?.image = UIImage(named: "car")
-        }
-        
-        annotationView?.canShowCallout = true
-        
-        return annotationView
-    }
+   
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("The annotation was selected: \(String(describing: view.annotation?.title))")
-    }
-}
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//      let renderer = MKPolylineRenderer(overlay: overlay)
+//      if (overlay is MKPolyline) {
+//        renderer.strokeColor = .red
+//        renderer.lineWidth = 5.0
+//        renderer.alpha = 1.0 // changed 0.8 to 1.0, now it works
+//      }
+//        return renderer
+//    }
+    
+   // func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//
+//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationView")
+//
+//        if annotationView == nil {
+//            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
+//        }
+//
+//        if let title = annotation.title, title == "Apple Park" {
+//            annotationView?.image = UIImage(named: "saucer")
+//        } else if let title = annotation.title, title == "Ortega Park" {
+//            annotationView?.image = UIImage(named: "tree")
+//        } else if annotation === mapView.userLocation {
+//            annotationView?.image = UIImage(named: "car")
+//        }
+//
+//        annotationView?.canShowCallout = true
+//
+//        return annotationView
+//    }
+//
+//    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+//        print("The annotation was selected: \(String(describing: view.annotation?.title))")
+//    }
+//}
 

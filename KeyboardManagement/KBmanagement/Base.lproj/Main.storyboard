@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KBmanagement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKn-1h-3qi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiP-S5-3su">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwz-Wy-ITi">
+                                                <rect key="frame" x="24" y="500" width="272" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iiP-S5-3su" secondAttribute="bottom" id="JD2-Zp-zgq"/>
+                                    <constraint firstAttribute="trailing" secondItem="iiP-S5-3su" secondAttribute="trailing" id="NLd-6w-vcT"/>
+                                    <constraint firstItem="iiP-S5-3su" firstAttribute="top" secondItem="EKn-1h-3qi" secondAttribute="top" id="TK7-fF-Gdi"/>
+                                    <constraint firstItem="iiP-S5-3su" firstAttribute="leading" secondItem="EKn-1h-3qi" secondAttribute="leading" id="wyW-yf-acP"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EKn-1h-3qi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ep0-Z6-Oq5"/>
+                            <constraint firstItem="EKn-1h-3qi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ikl-dG-gnX"/>
+                            <constraint firstItem="EKn-1h-3qi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YQO-Mz-bom"/>
+                            <constraint firstItem="iiP-S5-3su" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aeq-2J-XZM"/>
+                            <constraint firstItem="EKn-1h-3qi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="isI-09-heV"/>
+                            <constraint firstItem="iiP-S5-3su" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mPU-Bf-12Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="EKn-1h-3qi" id="VXt-qJ-gSl"/>
+                        <outlet property="textFieldName" destination="dwz-Wy-ITi" id="rkA-EN-KB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114.375" y="117.25352112676056"/>
+        </scene>
+    </scenes>
+</document>
