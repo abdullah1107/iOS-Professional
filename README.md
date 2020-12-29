@@ -1,4 +1,3 @@
-# iOS-Professional
-Professional iOS developer [working..)
+For Professional iOS developer [working..)
 
 
